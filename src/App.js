@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+// Gunakan theme di sini
+import { Box, ThemeProvider } from "@mui/material";
+import theme from "./themes/theme";
+
+// Gunakan MUI di sini
+import { Button, Typography } from "@mui/material";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // Gunakan ThemeProvider di sini
+    // Inject Context Theme di sini
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <header className="App-header">
+          <Box p={2}>
+            <Typography variant="h5">React List dan Axios</Typography>
+          </Box>
+          <Box
+            sx={{
+              p: 2,
+              display: "flex",
+              gap: 2,
+            }}
+          >
+            <Button variant="contained" color="primary">
+              Halo Warna Hijau
+            </Button>
+
+            <Button variant="contained" color="secondary">
+              Halo Warna Biru
+            </Button>
+          </Box>
+        </header>
+      </div>
+
+      {/* Jangan lupa ditutup */}
+    </ThemeProvider>
   );
 }
 
