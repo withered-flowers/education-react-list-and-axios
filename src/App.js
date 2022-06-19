@@ -8,6 +8,9 @@ import { Button, Typography } from "@mui/material";
 // Import ListMovies (Data JSON)
 import ListMovies from "./containers/ListMovies";
 
+// Import ListMoviesReal (Data TMDB)
+import ListMoviesReal from "./containers/ListMoviesReal";
+
 function App() {
   return (
     // Gunakan ThemeProvider di sini
@@ -37,6 +40,10 @@ function App() {
         {/* Panggil ListMovies Component di sini */}
         <section style={{ paddingLeft: 16, paddingRight: 16 }}>
           <ListMovies />
+        </section>
+        {/* Panggil ListMoviesReal Component di sini */}
+        <section style={{ paddingLeft: 16, paddingRight: 16 }}>
+          <ListMoviesReal />
         </section>
       </div>
 
